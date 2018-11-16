@@ -20,7 +20,15 @@ router.get("/", (req, res) => {
 
 // POST API route for creating a new burger
 router.post("/api/burgers", (req, res) => {
+    let data = req.body
+    
+    burger.create(data.name, data.devoured, result => {
+        console.log(result)
+        // Return ID of new entry
+        res.json({ id: result.insertId })
+    })
 
+    
 })
 
 // PUT API route for setting the status of a burger to 'devoured'
