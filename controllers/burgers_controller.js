@@ -21,13 +21,17 @@ router.get("/", (req, res) => {
 // POST API route for creating a new burger
 router.post("/api/burgers", (req, res) => {
     let data = req.body
-    
-    burger.create(data.name, data.devoured, result => {
-        console.log(result)
-        // Return ID of new entry
-        res.json({ id: result.insertId })
-    })
+    let name = data.name.trim()
 
+    // Make sure there is a name for burger
+    if (name) {
+        burger.create(data.name, data.devoured, result => {
+            console.log(result)
+            // Return ID of new entry
+            res.json({ id: result.insertId })
+        })
+    // Otherwise return 400 "Bad Request" status
+    } else res.status(400).end()
     
 })
 
