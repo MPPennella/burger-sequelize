@@ -6,6 +6,8 @@ const burger = require("../models/burger")
 const router = express.Router()
 
 // Route Definitions
+
+// GET route for index HTML page
 router.get("/", (req, res) => {
     burger.getAll(data => {
         var burgerListObj = {
@@ -14,6 +16,16 @@ router.get("/", (req, res) => {
         console.log(burgerListObj)
         res.render("index", burgerListObj)
     })
+})
+
+// POST API route for creating a new burger
+router.post("/api/burgers", (req, res) => {
+
+})
+
+// PUT API route for changing the 'devoured' status of a burger
+router.put("/api/burgers/:id", (req, res) => {
+
 })
 
 // Export router
