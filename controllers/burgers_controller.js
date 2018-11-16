@@ -23,9 +23,17 @@ router.post("/api/burgers", (req, res) => {
 
 })
 
-// PUT API route for changing the 'devoured' status of a burger
-router.put("/api/burgers/:id", (req, res) => {
-
+// PUT API route for setting the status of a burger to 'devoured'
+router.put("/api/burgers/devour/:id", (req, res) => {
+    let id = req.params.id
+    burger.devour(id, result => {
+        console.log(result)
+        // If table had affected rows, id was found, so return 200 "OK" status
+        // Does not matter if status was changed, only that id was valid
+        if (result.affectedRows) res.status(200).end()
+        // Else table did not contain id, so return 400 "Bad Request" status
+        else res.status(400).end()
+    })
 })
 
 // Export router
