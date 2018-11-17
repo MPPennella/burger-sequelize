@@ -1,5 +1,9 @@
-ul {
-    margin: 0 auto;
+li {
+    padding: 5px;
+}
+
+.title {
+    text-align: center;
 }
 
 .burgerCol {
@@ -7,4 +11,16 @@ ul {
     width: 50%;
     float: left;
     overflow: hidden;
+
+    padding: 25px;
+}
+
+button {
+    background-color: #333333;
+    color: #cccccc;
+    border: none;
+    border-radius: 3px;
+
+    margin-left: 5px;
+    padding: 4px;
 }
