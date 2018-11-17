@@ -6,6 +6,11 @@ $("document").ready(function() {
     })
 
     $(".devourBtn").on("click", function () {
+        // Get id from button data
+        let id = $(this).data("id")
+        console.log(id)
+
+        // Send PUT request to 'devour' selected id
         
     })
 })
