@@ -11,6 +11,11 @@ $("document").ready(function() {
         console.log(id)
 
         // Send PUT request to 'devour' selected id
-        
+        $.ajax(`api/burgers/devour/${id}`, {
+            type: "PUT"
+        }).then( function () {
+            location.reload()
+        })
+
     })
 })
