@@ -20,12 +20,11 @@ router.get("/", (req, res) => {
 
 // POST API route for creating a new burger
 router.post("/api/burgers", (req, res) => {
-    let data = req.body
-    let name = data.name.trim()
+    let name = req.body.name.trim()
 
     // Make sure there is a name for burger
     if (name) {
-        burger.create(data.name, data.devoured, result => {
+        burger.create(name, result => {
             console.log(result)
             // Return ID of new entry
             res.json({ id: result.insertId })

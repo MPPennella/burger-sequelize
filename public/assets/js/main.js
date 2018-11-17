@@ -6,10 +6,8 @@ $("document").ready(function() {
 
         // Gather data from form
         let burgerData = {
-            name: $("#newBurgerName").val().trim(),
-            devoured: $("[name=eaten]:checked").val()
+            name: $("#newBurgerName").val().trim()
         }
-        console.log(burgerData)
 
         // Submit POST request with data
         $.post("api/burgers", burgerData)
