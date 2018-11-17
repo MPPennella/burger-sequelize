@@ -1,0 +1,10 @@
+ul {
+    margin: 0 auto;
+}
+
+.burgerCol {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
