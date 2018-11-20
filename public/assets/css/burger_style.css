@@ -15,6 +15,17 @@ li {
     padding: 25px;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.formWrapper {
+    text-align: center;
+    display:block;
+}
+
 button {
     background-color: #333333;
     color: #cccccc;
