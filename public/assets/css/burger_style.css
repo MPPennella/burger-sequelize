@@ -1,3 +1,11 @@
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    text-align: left;
+}
+
 li {
     padding: 5px;
 }
@@ -6,19 +14,17 @@ li {
     text-align: center;
 }
 
+.burgerTableWrapper {
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .burgerCol {
     box-sizing: border-box;
     width: 50%;
     float: left;
     overflow: hidden;
-
-    padding: 25px;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .formWrapper {
