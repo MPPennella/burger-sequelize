@@ -32,12 +32,23 @@ li {
     display:block;
 }
 
+.form-group {
+    margin-bottom: 10px;
+}
+
 button {
     background-color: #333333;
     color: #cccccc;
-    border: none;
-    border-radius: 3px;
+    border: none;  
+}
 
+.devourBtn {
+    border-radius: 5px;
     margin-left: 5px;
     padding: 4px;
+}
+
+.addBtn {
+    border-radius: 10px;
+    padding: 10px;
 }
