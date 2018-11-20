@@ -9,11 +9,17 @@ $("document").ready(function() {
             name: $("#newBurgerName").val().trim()
         }
 
-        // Submit POST request with data
-        $.post("api/burgers", burgerData)
-        .then( function() {
-            location.reload()
-        })
+        // Clear form to prevent double-submission
+        $(".create-form")[0].reset()
+
+        // Validate name for non-empty content
+        if (burgerData.name) {
+            // Submit POST request with data
+            $.post("api/burgers", burgerData)
+            .then( function() {
+                location.reload()
+            })
+        } else console.log("FORM ERROR: Invalid name entry!")
     })
 
     $(".devourBtn").on("click", function () {
