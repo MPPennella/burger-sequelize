@@ -4,6 +4,7 @@ h2 {
 
 ul {
     text-align: left;
+    margin: 0;
 }
 
 li {
@@ -17,7 +18,10 @@ li {
 .burgerTableWrapper {
     display: table;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 15px;
+
+    border: 2px solid black;
+    padding: 10px;
 }
 
 .burgerCol {
@@ -29,7 +33,11 @@ li {
 
 .formWrapper {
     text-align: center;
-    display:block;
+    display:table;
+    margin: 0 auto;
+
+    border: 2px solid black;
+    padding: 10px 15px;
 }
 
 .form-group {
