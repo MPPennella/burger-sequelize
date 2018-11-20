@@ -18,6 +18,17 @@ router.get("/", (req, res) => {
     })
 })
 
+// GET API route for getting a list of all burgers
+router.get("/api/burgers", (req, res) => {
+    burger.getAll(data => {
+        // var burgerListObj = {
+        //      burgers: data
+        // }
+        console.log(data)
+        res.json(data)
+    })
+})
+
 // POST API route for creating a new burger
 router.post("/api/burgers", (req, res) => {
     let name = req.body.name.trim()
