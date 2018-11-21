@@ -1,9 +1,9 @@
-# burger
-Full-stack application that lets users create and eat their own burgers. Uses Node-Express server implementing a MVC architecture, and uses a MySQL database for data storage. Implements a RESTful API scheme to communicate from the client web-page to the server.
+# burger-sequelize
+Full-stack application that lets users create and eat their own burgers. Uses Node-Express server implementing a MVC architecture, and uses Sequelize ORM for handling MySQL database queries for data storage. Implements a RESTful API scheme to communicate from the client web-page to the server.
 
 See it in action (NOTE: Heroku may require some time to start the server if sleeping):
 
-`https://burger-app-mpp.herokuapp.com/`
+`https://burger-sequelize-app-mpp.herokuapp.com/`
 
 
 ## Webpage
