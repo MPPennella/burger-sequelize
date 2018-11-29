@@ -2,7 +2,7 @@
 const express = require("express")
 const exphbs = require("express-handlebars")
 const db = require("./models")
-const routes = require("./controllers/burgers_controller")
+const routes = require("./routes/burgers_controller")
 
 // Define listening port
 const PORT = process.env.PORT || 8080
