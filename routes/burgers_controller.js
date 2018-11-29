@@ -31,7 +31,11 @@ module.exports = function(app) {
 
         // Make sure there is a name for burger
         if (name) {
-            db.Burger.create(name, result => {
+            let burgerValues = {
+                burger_name: name,
+                devoured: false
+            }
+            db.Burger.create(burgerValues).then( result => {
                 console.log(result)
                 // Return ID of new entry
                 res.json({ id: result.insertId })
