@@ -7,13 +7,14 @@ module.exports = function(app) {
     // GET route for index HTML page
     app.get("/", (req, res) => {
         db.Burger.findAll({
-
+            // Raw formatting needed for proper response
+            raw: true
         }).then(data => {
             var burgerListObj = {
                 burgers: data
             }
             console.log(burgerListObj)
-            res.render("index", {burgerListObj})
+            res.render("index", burgerListObj)
         })
     })
 
