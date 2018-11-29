@@ -19,7 +19,7 @@ module.exports = function(app) {
 
     // GET API route for getting a list of all burgers
     app.get("/api/burgers", (req, res) => {
-        db.Burger.getAll(data => {
+        db.Burger.findAll().then(data => {
             console.log(data)
             res.json(data)
         })
