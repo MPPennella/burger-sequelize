@@ -24,7 +24,7 @@ app.set("view engine", "handlebars")
 // Add route controller
 routes(app)
 
-db.sequelize.sync({ force: true }).then(function () {
+db.sequelize.sync().then(function () {
     // Start server
     app.listen(PORT, function() {
         // Log (server-side) when our server has started
